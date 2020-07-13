@@ -26,3 +26,14 @@ function addRandomGreeting() {
   const greetingContainer = document.getElementById('greeting-container');
   greetingContainer.innerText = greeting;
 }
+
+function getDataServer()  {
+    fetch('/data').then(response => response.json()).then((quote) => {
+
+    const statsListElement = document.getElementById('data-container');
+    statsListElement.innerHTML = '';
+        statsListElement.appendChild(
+            createListElement(quote));
+       
+  });
+}
