@@ -7,3 +7,11 @@
 #greeting-container {
   margin-top: 20px;
 }
+
+#data-container {
+  margin-top: 20px;
+}
+
+#post-list {
+  list-style-type: none;
+}

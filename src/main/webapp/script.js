@@ -15,14 +15,20 @@
 /**
  * Adds a random greeting to the page.
  */
-function addRandomGreeting() {
-  const greetings =
-      ['Hello world!', '¡Hola Mundo!', '你好，世界！', 'Bonjour le monde!'];
+function getDataServer()  {
+    fetch('/animal-data').then(response => response.json()).then((posts) => {
 
-  // Pick a random greeting.
-  const greeting = greetings[Math.floor(Math.random() * greetings.length)];
-
-  // Add it to the page.
-  const greetingContainer = document.getElementById('greeting-container');
-  greetingContainer.innerText = greeting;
+    const statsListElement = document.getElementById('data-container');
+    statsListElement.innerHTML = '';
+    posts.forEach((posting) => {
+      statsListElement.appendChild(createListElement(posting.post));
+      statsListElement.appendChild(createListElement(posting.name));
+    })
+  });
 }
+
+function createListElement(text) {
+  const liElement = document.createElement('li');
+  liElement.innerText = text;
+  return liElement;
+}    

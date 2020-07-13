@@ -42,6 +42,20 @@
       <p>This section is free for discussion and questions</p>
       <p>*Insert Comment Section*</p>
     </a>
+
+    <form action="/animal-data" method="POST">
+        <p>Enter your name:</p>
+        <textarea name="name-area">Name</textarea>
+        <p>Enter a comment below:</p>
+        <textarea name="post-area">Post Here</textarea>
+        <br/><br/>
+        <input type="submit" />
+    </form>
+
+    <p>Click here view comments:</p>
+    <button onclick="getDataServer()">View Comments</button>
+    <div id="data-container"></div>
+
     </div>
   </body>
 </html>

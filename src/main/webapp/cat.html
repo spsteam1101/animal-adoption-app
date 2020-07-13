@@ -8,7 +8,7 @@
   </head>
   <body>
     <div id="content">
-      <a href="#cats"><text>General Behavior</text></a><br></br>
+    <a href="#cats"><text>General Behavior</text></a><br></br>
     <a href="#food"><text>Food</text></a><br></br>
     <a href="#play"><text>Playing with Cat</text></a><br></br>
     <a href="#funfacts"><text>Tips and Fun Facts</text></a><br></br>
@@ -45,6 +45,20 @@
       <p>This section is free for discussion and questions</p>
       <p>*Insert Comment Section*</p>
     </a>
+
+    <form action="/animal-data" method="POST">
+        <p>Enter your name:</p>
+        <textarea name="name-area">Name</textarea>
+        <p>Enter a comment below:</p>
+        <textarea name="post-area">Post Here</textarea>
+        <br/><br/>
+        <input type="submit" />
+    </form>
+
+    <p>Click here view comments:</p>
+    <button onclick="getDataServer()">View Comments</button>
+    <div id="data-container"></div>
+    
     </div>
   </body>
 </html>
