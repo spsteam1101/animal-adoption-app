@@ -25,22 +25,22 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import com.google.sps1101.data.Post;
+import sps1101.data.Post;
 import java.util.ArrayList;
 import java.util.List;
 import com.google.gson.Gson;
 
 /** Servlet that returns some example content. TODO: modify this file to handle comments data */
 @WebServlet("/animal-data")
-public class DataServlet extends HttpServlet {
+public class AnimalPagesServlet extends HttpServlet {
 
     private String page;
-    private List<Post> posts = new ArrayList<>();
+    private List<Post> posts;
 
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
     posts = new ArrayList<>();
-    String url;
+    String url = null;
     if (request instanceof HttpServletRequest) {
         url = ((HttpServletRequest)request).getRequestURL().toString();
     }
@@ -54,8 +54,8 @@ public class DataServlet extends HttpServlet {
         if (entity.getProperty("animalPage") == url)  {
             String name = (String) entity.getProperty("name");
             String post = (String) entity.getProperty("post");
-            Post post = new Post(name, post);
-            posts.add(new Post(post);
+            Post p = new Post(name, post);
+            posts.add(p);
         }
     }
 
@@ -91,7 +91,6 @@ public class DataServlet extends HttpServlet {
         response.sendRedirect(url); //Change to seperate link depending on what .html needs to be shown via if statement.
     }
     else {
-        System.out.err("URL not found. Return to landing page.");
         response.sendRedirect("index.html");
     }
   }

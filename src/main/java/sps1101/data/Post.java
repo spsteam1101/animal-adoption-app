@@ -1,7 +1,7 @@
 /*
 *This class is in charge of each Post object.
 */
-package com.google.sps1101.data;
+package sps1101.data;
 import java.util.ArrayList;
 import java.util.List;
 
