@@ -34,7 +34,7 @@ import com.google.gson.Gson;
 @WebServlet("/animal-data")
 public class AnimalPagesServlet extends HttpServlet {
 
-    private String page;
+    private String animal;
     private List<Post> posts;
 
   @Override
@@ -68,12 +68,13 @@ public class AnimalPagesServlet extends HttpServlet {
   }
 
    @Override
-  public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {  
+  public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException { 
     if (request instanceof HttpServletRequest) {
         String url = ((HttpServletRequest)request).getRequestURL().toString();
         //Gets comment from client.
         String name = getParameter(request, "name-area", "");
         String post = getParameter(request, "post-area", "");
+        //Add animalID param for url link stuff
         long timestamp = System.currentTimeMillis();
       
         //Sets up datastore.
