@@ -8,11 +8,13 @@ import java.util.List;
 public class Post  {
     private String name;
     private String post;
+    private String page;
     //Later add Comment class
 
-    public Post(String n, String p)  {
+    public Post(String n, String p, String pa)  {
         name = n;
         post =p;
+        page = pa;
     }
 
     public void setName(String n)  {
@@ -23,12 +25,20 @@ public class Post  {
         post = p;
     }
 
+    public void setPage(String n)  {
+        page = n;;
+    }
+
     public String getName()  {
         return name;
     }
 
     public String getPost()  {
         return post;
+    }
+
+    public String getPage()  {
+        return page;
     }
 
 }

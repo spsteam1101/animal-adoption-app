@@ -15,14 +15,16 @@
 /**
  * Adds a random greeting to the page.
  */
-function getDataServer()  {
+function getDataServer(text)  {
     fetch('/animal-data').then(response => response.json()).then((posts) => {
 
     const statsListElement = document.getElementById('data-container');
     statsListElement.innerHTML = '';
     posts.forEach((posting) => {
-      statsListElement.appendChild(createListElement(posting.post));
-      statsListElement.appendChild(createListElement(posting.name));
+    if (text === posting.page)  {
+      statsListElement.appendChild(createListElement('Name: ' + posting.name));
+      statsListElement.appendChild(createListElement('Post: ' + posting.post));
+    }
     })
   });
 }
@@ -32,3 +34,15 @@ function createListElement(text) {
   liElement.innerText = text;
   return liElement;
 }    
+
+function getContent()  {
+        fetch('/content').then(response => response.json()).then((con) => {
+
+    const statsListElement = document.getElementById('data-container');
+    statsListElement.innerHTML = '';
+        statsListElement.appendChild(
+            createListElement(con));
+  });
+}
+
+

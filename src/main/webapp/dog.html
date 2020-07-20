@@ -53,9 +53,10 @@
         <input type="submit" />
     </form>
 
-    <p>Click here view comments:</p>
-    <button onclick="getDataServer()">View Comments</button>
-    <div id="data-container"></div>
+        <input type="hidden" id="animalId" name="animalId" value="dog">
+        <p>Click here view comments:</p>
+        <button onclick="getDataServer('dog')"> View Comments</button>
+        <div id="data-container"></div>
 
     </div>
   </body>
