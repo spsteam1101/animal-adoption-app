@@ -11,7 +11,7 @@
           <script src="https://www.gstatic.com/charts/loader.js"></script>
         <script src="script.js"></script>
     </head>
-    <body>
+    <body onload="getContent()">
         <!-- HEADER & ABOUT -->
         <header>
             <nav class="top-nav">
@@ -51,5 +51,11 @@
               </div>
               </div> 
                 </section>
+
+                <!-- Content -->
+                <section class="content" id="content">
+                    <h1> Daily Content </h1>
+                </section>
+                    <div id="data-container"></div>
     </body>
 </html>

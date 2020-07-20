@@ -35,6 +35,14 @@ function createListElement(text) {
   return liElement;
 }    
 
+function getContent()  {
+        fetch('/content').then(response => response.json()).then((con) => {
 
+    const statsListElement = document.getElementById('data-container');
+    statsListElement.innerHTML = '';
+        statsListElement.appendChild(
+            createListElement(con));
+  });
+}
 
 
