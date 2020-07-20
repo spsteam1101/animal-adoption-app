@@ -34,16 +34,11 @@ import com.google.gson.Gson;
 @WebServlet("/animal-data")
 public class AnimalPagesServlet extends HttpServlet {
 
-    private String animal;
     private List<Post> posts;
 
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
     posts = new ArrayList<>();
-    String url = null;
-    if (request instanceof HttpServletRequest) {
-        url = ((HttpServletRequest)request).getRequestURL().toString();
-    }
 
    Query query = new Query("Post").addSort("timestamp", SortDirection.DESCENDING);
     DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
@@ -51,16 +46,12 @@ public class AnimalPagesServlet extends HttpServlet {
 
     //Adds each comment on the database to the client.
     for (Entity entity : results.asIterable()) {
-        if (entity.getProperty("animalPage") == url)  {
             String name = (String) entity.getProperty("name");
             String post = (String) entity.getProperty("post");
-            Post p = new Post(name, post);
+            String page = (String) entity.getProperty("animalPage");
+            Post p = new Post(name, post, page);
             posts.add(p);
-        }
     }
-
-
-
 
     response.setContentType("application/json");
     String json = new Gson().toJson(posts);
@@ -69,11 +60,10 @@ public class AnimalPagesServlet extends HttpServlet {
 
    @Override
   public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException { 
-    if (request instanceof HttpServletRequest) {
-        String url = ((HttpServletRequest)request).getRequestURL().toString();
         //Gets comment from client.
         String name = getParameter(request, "name-area", "");
         String post = getParameter(request, "post-area", "");
+        String pageFinder = getParameter(request, "animalId", "");
         //Add animalID param for url link stuff
         long timestamp = System.currentTimeMillis();
       
@@ -81,7 +71,7 @@ public class AnimalPagesServlet extends HttpServlet {
         Entity postEntity = new Entity("Post");
         postEntity.setProperty("name", name);
         postEntity.setProperty("post", post);
-        postEntity.setProperty("animalPage", url);
+        postEntity.setProperty("animalPage", pageFinder);
         postEntity.setProperty("timestamp", timestamp);
 
         DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
@@ -89,11 +79,7 @@ public class AnimalPagesServlet extends HttpServlet {
 
         //TODO  Set up comments either here or in another servlet.
 
-        response.sendRedirect(url); //Change to seperate link depending on what .html needs to be shown via if statement.
-    }
-    else {
-        response.sendRedirect("index.html");
-    }
+        response.sendRedirect(pageFinder + ".html"); //Change to seperate link depending on what .html needs to be shown via if statement.
   }
 
    /**
