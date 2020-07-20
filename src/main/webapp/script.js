@@ -15,17 +15,36 @@
 /**
  * Adds a random greeting to the page.
  */
-function addRandomGreeting() {
-  const greetings =
-      ['Hello world!', '¡Hola Mundo!', '你好，世界！', 'Bonjour le monde!'];
+function getDataServer(text)  {
+    fetch('/animal-data').then(response => response.json()).then((posts) => {
 
-  // Pick a random greeting.
-  const greeting = greetings[Math.floor(Math.random() * greetings.length)];
-
-  // Add it to the page.
-  const greetingContainer = document.getElementById('greeting-container');
-  greetingContainer.innerText = greeting;
+    const statsListElement = document.getElementById('data-container');
+    statsListElement.innerHTML = '';
+    posts.forEach((posting) => {
+    if (text === posting.page)  {
+      statsListElement.appendChild(createListElement('Name: ' + posting.name));
+      statsListElement.appendChild(createListElement('Post: ' + posting.post));
+    }
+    })
+  });
 }
+
+function createListElement(text) {
+  const liElement = document.createElement('li');
+  liElement.innerText = text;
+  return liElement;
+}    
+
+function getContent()  {
+        fetch('/content').then(response => response.json()).then((con) => {
+
+    const statsListElement = document.getElementById('data-container');
+    statsListElement.innerHTML = '';
+        statsListElement.appendChild(
+            createListElement(con));
+  });
+}
+
 
 function getDataServer()  {
     fetch('/animal-data').then(response => response.json()).then((quote) => {

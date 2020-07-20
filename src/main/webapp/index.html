@@ -1,18 +1,61 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-  </head>
-  <body>
-    <div id="content">
-      <h1>My Portfolio</h1>
-      <p>This is my portfolio.</p>
-      <p>Click here to get a random messaage:</p>
-      <button onclick="addRandomGreeting()">Hello</button>
-      <div id="greeting-container"></div>
-    </div>
-  </body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PET TIPS 🐾 </title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <link rel="stylesheet" href="landingpage.css">
+        <script src="https://use.fontawesome.com/3e86b2749f.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+          <script src="https://www.gstatic.com/charts/loader.js"></script>
+        <script src="script.js"></script>
+    </head>
+    <body onload="getContent()">
+        <!-- HEADER & ABOUT -->
+        <header>
+            <nav class="top-nav">
+                <ul class="nav-list">
+                    <li>
+                        <a href="#about" class="nav-link">about</a>
+                    </li>
+                    <li>
+                        <a href="#tips" class="nav-link">tips/tricks</a>
+                    </li>
+                     <li>
+                        <a href="#resources" class="nav-link">resources</a>
+                    </li>
+                     <li>
+                        <a href="#contact" class="nav-link">contact</a>
+                </ul>
+            </nav>
+                </div>
+                <section class="about" id="about">
+                    <h1> // ABOUT US // <br>
+                    <br>we are the number one source for pet information!
+                    <br>tips, tricks, nearby vets & pet stores, adoption information - we do it all! 
+                    <br><strong>ran by four uni students and pet lovers!</strong> </h1>
+                </section>
+        </header> 
+        <!-- TIPS & TRICKS -->
+                 <section class="tips" id ="tips">
+                <h1> TIPS & TRICKS </h1>
+                <h2>choose which animal you would like tips on!</h2>
+                 </section>
+                 <div class = "row">
+                     <div class = "column">
+                <a href ="/cat.html"><img src="images/CAT.png"></a>
+                </div>
+                <div class = "column">
+                <a href ="/dog.html"><img src="images/DOG.png"></a>
+              </div>
+              </div> 
+                </section>
+
+                <!-- Content -->
+                <section class="content" id="content">
+                    <h1> Daily Content </h1>
+                </section>
+                    <div id="data-container"></div>
+    </body>
 </html>
