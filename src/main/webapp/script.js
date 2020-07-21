@@ -15,36 +15,34 @@
 /**
  * Adds a random greeting to the page.
  */
-function addRandomGreeting() {
-  const greetings =
-      ['Hello world!', '¡Hola Mundo!', '你好，世界！', 'Bonjour le monde!'];
+function getDataServer(text)  {
+    fetch('/animal-data').then(response => response.json()).then((posts) => {
 
-  // Pick a random greeting.
-  const greeting = greetings[Math.floor(Math.random() * greetings.length)];
-
-  // Add it to the page.
-  const greetingContainer = document.getElementById('greeting-container');
-  greetingContainer.innerText = greeting;
+    const statsListElement = document.getElementById('data-container');
+    statsListElement.innerHTML = '';
+    posts.forEach((posting) => {
+    if (text === posting.page)  {
+      statsListElement.appendChild(createListElement('Name: ' + posting.name));
+      statsListElement.appendChild(createListElement('Post: ' + posting.post));
+    }
+    })
+  });
 }
 
-function getDataServer()  {
-    fetch('/animal-data').then(response => response.json()).then((quote) => {
+function createListElement(text) {
+  const liElement = document.createElement('li');
+  liElement.innerText = text;
+  return liElement;
+}    
+
+function getContent()  {
+        fetch('/content').then(response => response.json()).then((con) => {
 
     const statsListElement = document.getElementById('data-container');
     statsListElement.innerHTML = '';
         statsListElement.appendChild(
-            createListElement(quote));
-       
+            createListElement(con));
   });
 }
-function createMap() {
-  const map = new google.maps.Map(
-      document.getElementById('map'),
-      {center: {lat: 37.422, lng: -122.084}, zoom: 16});
 
-  const trexMarker = new google.maps.Marker({
-    position: {lat: 37.421903, lng: -122.084674},
-    map: map,
-    title: 'Stan the T-Rex'
-  });
-}
+

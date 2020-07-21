@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div id="content">
+    <a href="#dogs"><text>General Behavior</text></a><br></br>
+    <a href="#food"><text>Food</text></a><br></br>
+    <a href="#play"><text>Playing with Dog</text></a><br></br>
+    <a href="#funfacts"><text>Tips and Fun Facts</text></a><br></br>
+    <a href="#comments"><text>Comments & Discussion</text></a><br></br>
+    <img src="images/dog picture.png" style="width:260px;height:280px;"/>
+    <a id="dogs">
+      <h1>Dogs</h1>
+      <p>If you own a dog here is some tips and tricks about taking care of them </p>
+      <h2>General Behavior</h2>
+      <p>Dogs are generally fun and exciting pets to have. They love to play a lot and are full of energy. It is very important as the owner of a dog to give them this attention they required to ensure their happiness and well being. Taking care of the dog can be very similar to taking care of a baby or small child. It's good to play with them when you can. There are a ton of different breeds of dogs so it is important you know which kind of dog breed suits you the best. Knowing a dog breed will help you understand what the dog tends to need, and the way they will behave. But like all living things, everyone is unique in their own ways, so it is important to read your dogs behaviors. It can help build a healthy relationship between you and your pet. 
+      </p>
+    </a>
+    <a id="food">
+      <h2>Food</h2>
+      <p>Knowing how much to feed your dog is important as dogs can have very picky and specific diets and as an owner you must know what to feed your dog to ensure its health. It is important to not overfeed or under-feed your dog. But just as a note it is completely alright for your dog to only be eating a kibble-based diet, however it is always a good idea to change their diets to include other foods from time to time. However certain human foods must not be fed to dogs. This includes but not limited to: grapes related foods, and chocolate. However it is safe to feed dogs raw or cooked meats, fish, and of course vegetables, before doing this checking with a vet or dog specialist is always recommended. The amount of food you should give your dog is based on the size and weight of your dog. Smaller dogs tend to need less food than bigger dogs. For dogs about 70 pounds, 3.5 cups of food per day is a good estimate. </p>
+    </a>
+    <a id="play">
+      <h2>Playing with your dog</h2>
+      <p>Dogs have a lot of energy, and it's important they burn off that energy and exercise a lot. One good way is to have them go on a walk, not only can it benefit you but it can benefit your dog to make sure it is not growing overweight. Outside you have more space to do bigger activities like frisbee throwing and catch. But if you want an option that can be done inside, getting your dog toys where it can mess with and play with is a good idea to get them moving around. Also wouldn’t be hard for you to play with by playing tug of war with it, assuming the toy is strong enough to deal with the tugging. One more option you could do is have your dog learn tricks, and help you with simple things around your house. This would prevent them from just resting all day. And ultimately playing with your dog or keeping your dog active will ensure that by night time your dog should be sleeping soundly, getting ready to play for the next day.</p>
+    </a>
+    <a id="funfacts">
+      <h2>Tip and Fun Facts</h2>
+      <li>When a dogs nose is wet is a good indicator that their are in good health</li>
+      <li>*other fact about cats</li>
+    </a>
+    <a id="comments">
+      <h2>Discussion, Community Tips</h2>
+      <p>This section is free for discussion and questions</p>
+      <p>*Insert Comment Section*</p>
+    </a>
+
+    <form action="/animal-data" method="POST">
+        <p>Enter your name:</p>
+        <textarea name="name-area">Name</textarea>
+        <p>Enter a comment below:</p>
+        <textarea name="post-area">Post Here</textarea>
+        <input type="hidden" id="animalId" name="animalId" value="dog">
+        <br/><br/>
+        <input type="submit" />
+    </form>
+
+        <input type="hidden" id="animalId" name="animalId" value="dog">
+        <p>Click here view comments:</p>
+        <button onclick="getDataServer('dog')"> View Comments</button>
+        <div id="data-container"></div>
+
+    </div>
+  </body>
+</html>
