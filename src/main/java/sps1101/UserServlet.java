@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
     description = "UserAPI: Login / Logout with UserService",
     urlPatterns = "/userapi"
 )
-public class UsersServlet extends HttpServlet {
+public class UserServlet extends HttpServlet {
 
   @Override
   public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
