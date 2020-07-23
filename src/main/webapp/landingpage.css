@@ -112,6 +112,38 @@ li{
     text-align: center;
 }
 
+.resources h1{
+    font-size: 1rem;
+    font-family: 'PlayfairDisplay', serif;
+    font-weight: bold;
+    margin-top: 300px;
+    text-align: center;
+}
+
+.resources h2{
+    font-size: 1rem;
+    font-family: 'PlayfairDisplay', serif;
+    font-weight: 200;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.contact h1{
+    font-size: 1rem;
+    font-family: 'PlayfairDisplay', serif;
+    font-weight: bold;
+    margin-top: 300px;
+    text-align: center;
+}
+
+.contact h2{
+    font-size: 1rem;
+    font-family: 'PlayfairDisplay', serif;
+    font-weight: 200;
+    margin-top: 30px;
+    text-align: center;
+}
+
 .content h1{
     font-size: 1rem;
     font-family: 'PlayfairDisplay', serif;
