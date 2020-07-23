@@ -3,19 +3,22 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>PET TIPS 🐾 </title>
+        <title>PET TIPS 🐾 </title>   
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
         <link rel="stylesheet" href="landingpage.css">
         <script src="https://use.fontawesome.com/3e86b2749f.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-          <script src="https://www.gstatic.com/charts/loader.js"></script>
+        <script src="https://www.gstatic.com/charts/loader.js"></script>
         <script src="script.js"></script>
     </head>
     <body onload="getContent()">
         <!-- HEADER & ABOUT -->
-        <header>
+        <header> 
             <nav class="top-nav">
                 <ul class="nav-list">
+                    <li>
+                        🐾
+                    
                     <li>
                         <a href="#about" class="nav-link">about</a>
                     </li>
@@ -24,26 +27,71 @@
                     </li>
                     <li>
                         <a href="#tips" class="nav-link">tips/tricks</a>
-                    </li>
+                    </li> 
                      <li>
                         <a href="#resources" class="nav-link">resources</a>
                     </li>
                      <li>
                         <a href="#contact" class="nav-link">contact</a>
                     </li>
+                    <li>
+                    🐾
+                    </li>
                 </ul>
             </nav>
+            <div class= "about-me-pic"> 
+                <img id="selfie" src="https://data.whicdn.com/images/333440654/original.jpg">
                 </div>
                 <section class="about" id="about">
-                    <h1> // ABOUT US // <br>
+                    <h1><strong><b>ABOUT THE CREATORS</b></strong><br>
                     <br>we are the number one source for pet information!
                     <br>tips, tricks, nearby vets & pet stores, adoption information - we do it all! 
-                    <br><strong>ran by four uni students and pet lovers!</strong> </h1>
+                    <br>ran by four uni students and pet lovers!</h1>
                 </section>
         </header> 
          <!-- CONTENT -->
                 <section class="content" id="content">
-                    <h1> Daily Content </h1>
+                    <h1><strong><b>DAILY CONTENT</b></strong></h1>
+                    </br>
+                    <div class = "daily">
+                    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+.mySlides {display:none;}
+</style>
+<section>
+ 
+<div class="w3-content w3-display-container">
+  <img class="mySlides" src="https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2018/01/12201051/cute-puppy-body-image.jpg" style="width:100%">
+  <img class="mySlides" src="https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/article_thumbnails/reference_guide/outdoor_cat_risks_ref_guide/1800x1200_outdoor_cat_risks_ref_guide.jpg" style="width:100%">
+  <img class="mySlides" src="https://www.colorado.edu/cumuseum/sites/default/files/styles/widescreen/public/slider/coachwhip2_1.jpg?itok=ImtHEWPe" style="width:100%">
+
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+
+</section>
+
                 </section>
                     <div id="data-container"></div>
         <!-- TIPS & TRICKS -->
@@ -51,25 +99,32 @@
                 <h1> TIPS & TRICKS </h1>
                 <h2>choose which animal you would like tips on!</h2>
                  </section>
-                 <div class = "row">
+                 <div class = "row"> 
                      <div class = "column">
-                <a href ="/cat.html"><img src="images/CAT.png"></a>
+                <a href ="/cat.html"><img src="https://www.mvshospital.com/wp-content/uploads/revslider/homepage/cat.png"></a>
                 </div>
                 <div class = "column">
-                <a href ="/dog.html"><img src="images/DOG.png"></a>
+                <a href ="/dog.html"><img src="https://pngimg.com/uploads/dog/dog_PNG50348.png"></a>
                 </div>
                 <div class = "column">
-                <a href ="/snake.html"><img src="images/SNAKE.jpg"></a>
+                <a href ="/snake.html"><img src="https://pluspng.com/img-png/snake-hd-png-cobra-snake-png-transparent-image-1399.png"></a>
               </div>
               </div> 
                 </section>
         <!-- RESOURCES -->
                  <section class="resources" id ="resources">
-                <h1> RESOURCES </h1>
-                <h2> *insert map here*</br>
-                 <a href="https://www.aspca.org/pet-care/dog-care/general-dog-care"> dog care! [CLICK]</a></br>
-                 <a href ="https://www.aspcapetinsurance.com/customer-community/pet-health-library/pet-maintenance/general-cat-care/">cat care! [CLICK]</a>
+                <h1> RESOURCES NEAR YOU </h1>
+                </br>
+                <img src ="https://sangerpapers.files.wordpress.com/2013/08/screenshot1.jpg">
+                </br>
+                 <center><a href="https://www.aspca.org/pet-care/dog-care/general-dog-care"> GENERAL DOG CARE (click)</a></br>
+                 <a href ="https://www.aspcapetinsurance.com/customer-community/pet-health-library/pet-maintenance/general-cat-care/">GENERAL CAT CARE (click)</a>
                  </br>
+                 </br>
+                 <i>MANHATTAN:</i></br>
+                 (1) CITIPUPS</br>
+                 (2) PAWS IN CHELSEA</br>
+                 (3) ANIMAL HAVEN</br>
                  </h2>
                  </section>
               </div>
@@ -81,9 +136,12 @@
                 <h2>malachi: mblenman@sps-program.com</br>
                 victor: vzapataiii@sps-program.com</br>
                 ben: bawobotu@sps-program.com</br>
-                ethan: erigby@sps-program.com 
+                ethan: erigby@sps-program.com </br>
+                </br>
+                </br></br></br></br></br></br></br></br>
                 </h2>
                  </section>
               </div>
+              <b><center>© TEAM 1101, SOFTWARE PRODUCT SPRINT, 2020</center></b> 
     </body>
 </html>
