@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>PET TIPS 🐾 -Snake</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div id="content">
+    <a href="#snakes"><text>General Behavior</text></a><br></br>
+    <a href="#food"><text>Food</text></a><br></br>
+    <a href="#play"><text>Playing with Sanke</text></a><br></br>
+    <a href="#funfacts"><text>Tips and Fun Facts</text></a><br></br>
+    <a href="#comments"><text>Comments & Discussion</text></a><br></br>
+    <img src="images/SNAKE.jpg" style="width:260px;height:280px;"/>
+    <a id="snakes">
+      <h1>Snakes</h1>
+      <p>If you own a snake here is some tips and tricks about taking care of them. </p>
+      <h2>General Behavior</h2>
+      <p>Snakes aren’t like other pets which are normally tamed animals. Though it is possible to keep a snake as a pet, It requires a lot of responsibility and a good relationship with a snake. Even though not all snakes are dangerous, they are still wild animals to be feared and keeping one in your house, you must make sure they feel comfortable to prevent them from going hostile. Snakes' nature and attitudes vary from species of snake, some snakes being quite docile to humans than others, snakes can be very good companions and a good way to shock or surprise guests in your home to see you have a snake as a pet. But since snakes aren’t your usual pet you need to understand how your snake’s normal behavior is in order to keep it in your home, and you can have the positive relationship you want with your snake. </p>
+    </a>
+    <a id="food">
+      <h2>Food</h2>
+      <p>	In the wild snakes eat a lot of rodents, insects, or any animal they can fit into their mouth. This is critical for the snake to get the nutrients it needs, as they are carnivores and only eat meat in their diet. However, it might not be a good idea to feed them live rodents, as a live animal can still fight the snake, and it might become dangerous for your snake if they eat something that can bite. Fortunately it can be a good idea to get frozen, or recently decreased rodents from a pet store to feed to your snake. This can supply the snake with their nutrients, prevent an animal from psychological pains, and keeps your snake safe. Snakes actually don’t need to be fed often, depending on age and size, your snake should only need to eat once or twice for the week. The only time it changes is if you own a female snake which around breeding season they tend to want to eat more around that time. </p>
+    </a>
+    <a id="play">
+      <h2>Playing with your snake</h2>
+      <p>	Make sure you know the breed of your snake and your relationship with your snake before interacting with them personally. Some snakes can be alright with human touch and others might not. But one way to play with your snake, is letting them slither around your body, hand, or wherever you are comfortable with. Just make sure you are gentle with handling the snake, you don’t want to scare or intimidate them. You also don’t want to hold them for too long, especially if the snake is new, since they may not be fully comfortable with you yet to want you to touch them for long. But it recommended that you take it slow for your snake to make sure they understand that you do not want to harm them. </p>
+    </a>
+    <a id="funfacts">
+      <h2>Tip and Fun Facts</h2>
+      <li>Snakes actually don’t eat much, so even though you have to get a lot of rodents for food.</li>
+      <li>Snakes don’t make so much noise. So if you don’t like other pets making a lot of noises, then snakes are the perfect pet. Another addition snakes don’t have odors and are very clean animals to have. 
+</li>
+      <li>Snakes actually have a very long life span with the average of 25-30 years. 
+</li>
+      <li>Since snakes are reptiles they require a good amount of light and heating. It is important to know the breed of your snake to know what kind of light is suitable for your snake, and a good temperature to keep them in while they are in their cage. </li>
+    </a>
+    <a id="comments">
+      <h2>Discussion, Community Tips</h2>
+      <p>This section is free for discussion and questions</p>
+      <p>*Insert Comment Section*</p>
+    </a>
+
+    <form action="/animal-data" method="POST">
+        <p>Enter your name:</p>
+        <textarea name="name-area">Name</textarea>
+        <p>Enter a comment below:</p>
+        <textarea name="post-area">Post Here</textarea>
+        <input type="hidden" id="animalId" name="animalId" value="snake">
+        <br/><br/>
+        <input type="submit" />
+    </form>
+
+    <p>Click here view comments:</p>
+    <button onclick="getDataServer('snake')">View Comments</button>
+    <div id="data-container"></div>
+    
+    </div>
+  </body>
+</html>
